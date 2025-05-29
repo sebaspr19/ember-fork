@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ember & Fork</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<title>sucursales</title>
+</head>	
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="imágenes/logo.png" alt="Ember & Fork Logo"></a>
+            </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="sucursales.html">Sucursales</a></li>
+        <li><a href="eventos.html">Eventos</a></li><li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+	<body>
+  <div class="form-container">
+    <h2>Reservá tu mesa</h2>
+    <form id="reservaForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required>
+
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora" required>
+
+      <label for="comensales">Número de Comensales:</label>
+      <input type="number" id="comensales" name="comensales" min="1" required>
+
+      <button type="submit">Enviar reserva</button>
+    </form>
+    <div class="success-message" id="mensajeExito">
+      ¡Tu reserva fue enviada con éxito!
+    </div>
+  </div>
+		
+	 <script>
+    document.getElementById('reservaForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      if (form.checkValidity()) {
+        form.style.display = 'none';
+        document.getElementById('mensajeExito').style.display = 'block';
+      }
+    });
+  </script> 
+		
+  <footer>
+         <section id="contacto" class="seccion">
+         <h1>📞 Contactanos</h1>
+         <p>¿Tenés dudas o sugerencias? Escribinos a contacto@emberfork.com o llamanos al 9 11 3617-8459 </p>
+         </section>
+    <div class="footer-content">
+      <div class="logo-social">
+        <img src="imágenes/logo.png" alt="Ember & Fork Logo" class="footer-logo">
+        <div class="footer-redes">
+          <img src="imágenes/facebook.png" alt="Facebook">
+            <img src="imágenes/ig.png" alt="Instagram">
+            <img src="imágenes/tiktok logo.png" alt="TikTok">
+        </div>
+      </div>
+      <p class="rights">&copy; 2025 Ember & Fork. Todos los derechos reservados.</p>
+    </div>  
+  </footer>
+</body>
+</body>
+</html>

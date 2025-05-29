@@ -1,0 +1,1082 @@
+/* Reset de márgenes y fuente básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos para la imagen dentro del logo */
+/* Establece la altura de la imagen del logo en 70 píxeles. */
+.logo img {
+    height: 70px;
+}
+
+/* Estilos para el botón de llamada a la acción (Ver Menú) */
+/* Define la apariencia del botón principal, como el color de fondo, texto, espaciado y bordes redondeados. */
+.cta {
+    display: inline-block; /* Permite establecer ancho y alto, pero se comporta como inline */
+    margin-top: 1rem; 
+    padding: 0.75rem 1.5rem; 
+    background-color: #cc543a; 
+    color: #fff; 
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; 
+    transition: transform 0.2s ease; 
+}
+/* Estilo para el hover del botón de llamada a la acción */
+/* Agranda ligeramente el botón cuando el usuario pasa el cursor por encima. */
+.cta:hover {
+ transform: scale(1.05); /* Escala el elemento al 105% */
+}
+/* Estilos para la sección genérica */
+.seccion {
+    margin: 1rem auto; /* Márgenes superior e inferior de 1rem, centrado horizontalmente */
+    padding: 2rem; /* Espaciado interno en todos los lados */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    max-width: 600px; /* Ancho máximo de la sección */
+    }
+/* Estilos para el cuerpo de la página */
+body {
+ font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+ margin: 0; /* Elimina los márgenes predeterminados del body */
+ background-color: #fef5ef; /* Color de fondo beige claro */
+ color: #4a1c1a; /* Color de texto marrón oscuro */
+}
+/* Estilos para la sección del menú */
+.menu-section {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px; /* Ajusta el ancho máximo según necesites */
+    text-align: center;
+}
+
+.menu-section h2 {
+    /* Estilos para el título si decides mantenerlo */
+    font-size: 2rem;
+    color: #380101;
+    margin-bottom: 1.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Imágenes más grandes */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.menu-item {
+    position: relative; /* Para posicionar la superposición */
+    overflow: hidden; /* Oculta la superposición fuera del hover */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover; /* Esta propiedad es clave para el llenado */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(95,1,12,1.00); /* Fondo oscuro y semitransparente */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-item:hover .overlay {
+    opacity: 1; /* Se muestra al pasar el cursor */
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.comprar-btn {
+    background-color: #cc543a; /* Color del botón comprar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.comprar-btn:hover {
+    background-color: #b8360f; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilos para la sección de sucursales visual */
+.sucursales-visual {
+    padding: 4rem 2rem;
+    margin: 3rem auto;
+    max-width: 1100px;
+    background-color: #fef5ef;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.sucursales-title {
+    font-size: 3rem;
+    color: #661400;
+    margin-bottom: 2.5rem;
+}
+
+.sucursales-grid {
+    display: grid;
+    /* Definimos explícitamente 3 columnas con un ancho mínimo */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    justify-items: stretch; /* Los elementos se estiran para ocupar su celda */
+}
+
+/* Centrar la última fila si tiene un solo elemento */
+.sucursales-grid > .sucursal-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    justify-self: center; /* Se centra horizontalmente dentro de la fila */
+}
+
+/* Centrar los dos últimos elementos si hay cuatro en total */
+.sucursales-visual {
+    padding: 4rem 2rem;
+    margin: 3rem auto;
+    max-width: 1100px;
+    background-color: #fef5ef;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.sucursales-title {
+    font-size: 3rem;
+    color: #661400;
+    margin-bottom: 2.5rem;
+}
+
+.sucursales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    justify-items: stretch;
+}
+
+/* Centrar la última fila si tiene un solo elemento */
+.sucursales-grid > .sucursal-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+/* Centrar los dos últimos elementos si hay cuatro en total */
+.sucursales-grid > .sucursal-item:nth-last-child(-n+2):nth-child(even) {
+    grid-column: span 1;
+}
+
+.sucursal-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.sucursal-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.sucursal-item img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.sucursal-info {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.sucursal-info h3 {
+    font-size: 1.8rem;
+    color: #380101;
+    margin-bottom: 0.5rem;
+}
+
+.sucursal-info .direccion {
+    color: #d9471a;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.sucursal-info .descripcion {
+    color: #4a1c1a;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.sucursal-info a {
+    color: #d9471a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.sucursal-info a:hover {
+    color: #b8360f;
+    text-decoration: underline;
+}
+
+.proximamente {
+    font-size: 1.5rem;
+    color: #4a1c1a;
+    font-weight: bold;
+}
+
+.sucursales-subtitle {
+    font-size: 2.5rem;
+    color: #791f00;
+    margin-bottom: 1.5rem;
+}
+
+.sucursal-card:hover {
+    transform: scale(1.08);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Añadimos una sombra al hacer hover */
+}
+
+/* Media query para pantallas de hasta 768px (típicamente teléfonos) */
+@media (max-width: 768px) {
+    .sucursales-title {
+        font-size: 2.2rem; /* Título más pequeño */
+        margin-bottom: 1.5rem;
+    }
+
+    .sucursales-grid {
+        grid-template-columns: 1fr; /* Una sola columna en teléfonos */
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .sucursal-item {
+        /* No necesitamos un ancho específico, ocupará el 100% de la columna */
+    }
+
+    .sucursal-info h3 {
+        font-size: 1.5rem; /* Título de sucursal más pequeño */
+        margin-bottom: 0.3rem;
+    }
+
+    .sucursal-info .direccion {
+        font-size: 0.9rem; /* Dirección más pequeña */
+        margin-bottom: 0.7rem;
+    }
+
+    .sucursal-info .descripcion {
+        font-size: 0.9rem; /* Descripción más pequeña */
+        margin-bottom: 0.7rem;
+    }
+
+    .sucursal-info a {
+        font-size: 1rem; /* Enlace más pequeño */
+    }
+
+    .proximamente {
+        font-size: 1.2rem; /* Texto "Próximamente" más pequeño */
+    }
+}
+
+
+    .sucursales-grid {
+        grid-template-columns: 1fr; /* Una sola columna en teléfonos */
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .sucursal-item {
+        /* No necesitamos un ancho específico, ocupará el 100% de la columna */
+    }
+
+    .sucursal-info h3 {
+        font-size: 1.5rem; /* Título de sucursal más pequeño */
+        margin-bottom: 0.3rem;
+    }
+
+    .sucursal-info .direccion {
+        font-size: 0.9rem; /* Dirección más pequeña */
+        margin-bottom: 0.7rem;
+    }
+
+    .sucursal-info .descripcion {
+        font-size: 0.9rem; /* Descripción más pequeña */
+        margin-bottom: 0.7rem;
+    }
+
+    .sucursal-info a {
+        font-size: 1rem; /* Enlace más pequeño */
+    }
+
+    .proximamente {
+        font-size: 1.2rem; /* Texto "Próximamente" más pequeño */
+    }
+}
+    .sucursales-subtitle {
+    font-size: 1.8rem;
+    color: #791f00;
+    margin-bottom: 1.5rem;
+}
+
+.sucursal-card:hover {
+    transform: scale(1.08);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Añadimos una sombra al hacer hover */
+}
+
+
+/* Estilos para la sección de eventos Ember */
+.eventos-ember {
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    max-width: 1160px; /* Ancho máximo común para el contenido */
+    background-color: #fff; /* Fondo blanco como en la imagen */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el título y el subtítulo */
+}
+
+.eventos-ember h2 {
+    font-size: 2.5rem;
+    color: #333; /* Color de texto oscuro */
+    margin-bottom: 0.5rem;
+}
+
+.eventos-ember .subtitulo-eventos {
+    color: #e53935; /* Color rojo similar al de la imagen */
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.eventos-contenedor {
+    display: flex; /* Usamos Flexbox para la disposición lado a lado */
+    flex-wrap: wrap; /* Permite que se apilen en pantallas más pequeñas */
+    gap: 2rem; /* Espacio entre la imagen y el texto */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+}
+
+.eventos-imagen {
+    flex: 1 1 40%; /* La imagen ocupa aproximadamente el 40% del ancho */
+    border-radius: 8px;
+    overflow: hidden; /* Para redondear las esquinas de la imagen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eventos-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.eventos-info {
+    flex: 1 1 55%; /* El texto ocupa aproximadamente el 55% del ancho */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.eventos-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.eventos-info p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.eventos-info .lista-eventos {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    display: grid; /* Usamos Grid para la lista de opciones */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dos columnas responsivas */
+    gap: 0.5rem 1rem; /* Espacio vertical y horizontal entre los elementos */
+}
+
+.eventos-info .lista-eventos li::before {
+    content: "•"; /* Viñeta */
+    color: #e53935;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.cta-eventos {
+    text-align: center; /* Centra el título y el botón del CTA */
+    margin-top: 2rem;
+}
+
+.cta-eventos h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.boton-cotizacion {
+	text-decoration: none;
+    background-color: #e53935; /* Color rojo del botón */
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-cotizacion:hover {
+    background-color: #c62828; /* Un tono más oscuro al pasar el mouse */
+}
+/* Media query para pantallas más pequeñas (apilar imagen y texto) */
+@media (max-width: 768px) {
+    .eventos-contenedor {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .eventos-imagen, .eventos-info {
+        flex: 1 1 100%;
+    }
+    .eventos-info {
+        text-align: center; /* Centrar el texto en pantallas pequeñas */
+    }
+    .lista-eventos {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Una columna en pantallas muy pequeñas */
+    }
+}
+/* Media query para pantallas más pequeñas (apilar imagen y texto) */
+
+/* Estilos para el contenido principal */
+/* Define el espaciado interno, ancho máximo y centrado horizontal para el contenido principal. */
+.main-content {
+ padding: 2rem; /* Espaciado interno */
+ max-width: 800px; /* Ancho máximo del contenido principal */
+ margin: auto; /* Centra horizontalmente */
+ font-size: 1.2rem; /* Tamaño de fuente base para el contenido principal */
+}
+
+/* Estilos para las secciones */
+/* Añade un margen inferior a todas las secciones para separarlas. */
+section {
+ margin-bottom: 2.5rem; /* Margen inferior */
+}
+
+/* Estilos para los títulos de nivel 2 */
+/* Define el tamaño de la fuente, margen inferior y color del texto para los títulos h2. */
+h2 {
+ font-size: 1.8rem; /* Tamaño de la fuente */
+ margin-bottom: 0.5rem; /* Margen inferior */
+ color: #380101; /* Color del texto marrón oscuro */
+}
+
+/* Estilos para el pie de página */
+/* Define el color de fondo, color del texto, espaciado interno y alineación del texto del pie de página. */
+footer {
+ background-color: #5F010C; /* Color de fondo rojo oscuro */
+ color: #ffffff; /* Color del texto blanco */
+ padding: 2rem 1rem; /* Espaciado interno superior/inferior y lateral */
+ text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilos para el contenedor del contenido del pie de página */
+/* Establece el ancho máximo y centrado horizontal para el contenido del pie de página. */
+.footer-content {
+ max-width: 1000px; /* Ancho máximo */
+ margin: auto; /* Centra horizontalmente */
+}
+
+/* Estilos para el logo en el pie de página */
+/* Define el ancho y el margen inferior del logo en el pie de página. */
+.footer-logo {
+ width: 100px; /* Ancho del logo */
+ margin-bottom: 1rem; /* Margen inferior */
+}
+
+/* Estilos para los iconos de redes sociales en el pie de página */
+/* Define el ancho, alto y transición para los iconos de redes sociales. */
+.footer-redes img {
+ width: 30px; /* Ancho de los iconos */
+ height: 30px; /* Alto de los iconos */
+ transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Estilo para el hover de los iconos de redes sociales */
+/* Agranda ligeramente los iconos cuando el usuario pasa el cursor por encima. */
+.footer-redes img:hover {
+ transform: scale(1.1); /* Escala el elemento al 110% */
+}
+
+
+/* Estilos para el contenedor de los iconos sociales */
+/* Define el margen para los iconos sociales. */
+.social-icons {
+ margin: 1rem 0; /* Margen superior e inferior */
+}
+
+/* Estilos para los enlaces de los iconos sociales */
+/* Define el margen, color del texto, tamaño de la fuente y transición para los enlaces de los iconos sociales. */
+.social-icons a {
+ margin: 0 0.5rem; /* Margen lateral entre iconos */
+ color: #ffffff; /* Color del texto blanco */
+ font-size: 1.5rem; /* Tamaño de la fuente */
+ transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para el hover de los enlaces de los iconos sociales */
+/* Cambia el color del texto cuando el usuario pasa el cursor por encima. */
+.social-icons a:hover {
+ color: #f97316; /* Color del texto naranja */
+}
+
+/* Estilos para la sección de derechos de autor */
+/* Define el tamaño de la fuente, margen superior y opacidad del texto de derechos de autor. */
+.rights {
+ font-size: 0.9rem; /* Tamaño de la fuente */
+ margin-top: 1rem; /* Margen superior */
+ opacity: 0.7; /* Opacidad del texto */
+}
+
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex; /* Utiliza Flexbox para la disposición de los elementos */
+    justify-content: space-between; /* Espacia los elementos hijos (logo y menú) */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    background-color: #5F010C; /* Color de fondo rojo oscuro */
+    padding: 1rem; /* Espaciado interno */
+    position: relative; /* Permite posicionar elementos hijos de forma absoluta */
+}
+/* Estilos para el contenedor del logo */
+/* Define el tamaño de la fuente, peso y altura de línea del logo. */
+.logo {
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    line-height: 1.2; /* Altura de línea */
+}
+/* Estilos para el enlace dentro del logo */
+/* Asegura que el enlace del logo sea blanco y no esté subrayado. */
+.logo a { /* Para que el logo sea un link */
+    color: white; /* Color del texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+}
+/* Estilos para la imagen dentro del logo */
+/* Establece la altura de la imagen del logo. */
+.logo img {
+    height: 70px; /* Altura de la imagen */
+}
+/* Estilos para el icono del menú hamburguesa (para dispositivos móviles) */
+/* Oculta el icono por defecto y lo muestra en media queries para móviles. */
+.menu-icon {
+    display: none; /* Oculta el elemento */
+    font-size: 2rem; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilos para el toggle del menú (otro icono, similar al hamburguesa) */
+/* Similar al menu-icon, se puede usar como alternativa o para diferentes estados. */
+.menu-toggle {
+ display: none; /* Oculta el elemento */
+ font-size: 2rem; /* Tamaño de la fuente */
+ color: #fff; /* Color del texto blanco */
+ cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+/* Estilos para la lista de enlaces de navegación */
+.nav-links {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Utiliza Flexbox para la disposición horizontal */
+    gap: 1rem; /* Espacio entre los elementos hijos */
+}
+/* Estilos para los enlaces dentro de la navegación */
+.nav-links li a {
+    color: #fff; /* Color del texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1.3rem; /* Tamaño de la fuente */
+    margin-left: 2rem; /* Margen izquierdo */
+}
+
+/* Sección Hero */
+/* Centra el contenido, añade espaciado interno y establece el color de fondo. */
+.hero {
+    /* Mantén tus estilos actuales */
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative; /* Necesario para el z-index del texto y botón */
+    z-index: 2; /* Asegura que el texto y el botón estén por encima de la imagen */
+    background-image: url("imágenes/emberandfork.jpg");
+    background-size: cover; /* Cubre todo el espacio del contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #fff1e6; 
+  min-height: 60vh; /* O la altura que hayas elegido */
+    display: flex; /* Para centrar verticalmente el texto y el botón */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;
+    color: #ffff; 
+}
+
+.hero h1 {
+    font-size: 3rem; /* Aumenta el tamaño del título. Ajusta el valor según necesites. */
+    color: #fff; /* Asegúrate de que el color del texto contraste */
+    margin-bottom: 1.5rem; /* Ajusta el margen si es necesario */
+}
+
+.hero .cta {
+    font-size: 1.2rem; /* Aumenta el tamaño del texto del botón. Ajusta el valor según necesites. */
+    padding: 1rem 2rem; /* Ajusta el padding si es necesario */
+    background-color: #cc543a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.hero .cta:hover {
+    transform: scale(1.05);
+}
+/* Estilos para el botón dentro de la sección Hero */
+.hero button {
+    background-color: #E74C3C; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    border: none; /* Elimina el borde */
+    padding: 1.5rem 2.5rem; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilos para un botón genérico */
+/* Define la apariencia de un botón reutilizable, similar al de la sección Hero. */
+.btn {
+    display: inline-block; /* Permite establecer ancho y alto, pero se comporta como inline */
+    padding: 0.8rem 1.5rem; /* Espaciado interno */
+    background-color: #d9471a; /* Color de fondo naranja */
+    color: white; /* Color del texto blanco */
+    border: none; /* Elimina el borde */
+    border-radius: 10px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+/* Estilo para el hover del botón genérico */
+/* Oscurece ligeramente el color de fondo cuando el usuario pasa el cursor por encima. */
+.btn:hover {
+    background-color: #b8360f; /* Color de fondo naranja oscuro */
+}
+/* Estilos para el icono del menú hamburguesa (para dispositivos móviles) */
+/* Oculta por defecto y se muestra en media queries para móviles. */
+.hamburger {
+    display: none; /* Oculta el elemento */
+    font-size: 2rem; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    color: white; /* Color del texto blanco */
+    }
+/* Galería de Imágenes */
+/* Utiliza Grid Layout para organizar las imágenes, con columnas que se ajustan automáticamente al ancho del contenedor. */
+.galeria {
+    display: grid; /* Utiliza Grid Layout */
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); /* Crea columnas que se ajustan, con un ancho mínimo de 220px */
+    gap: 1.3rem; /* Espacio entre las celdas de la cuadrícula */
+    padding: 2rem; /* Espaciado interno */
+    justify-items: center; /* Centra los elementos horizontalmente dentro de su celda */
+    align-items: center; /* Centra los elementos verticalmente dentro de su celda */
+}
+
+/* Estilos para cada tarjeta de la galería */
+/* Define el color de fondo, bordes redondeados, sombra y desbordamiento oculto para las tarjetas de las imágenes. */
+.card {
+    background-color: white; /* Color de fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra suave */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    width: 100%; /* Ancho del 100% de su contenedor */
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+/* Define el ancho, relación de aspecto, cómo se ajusta la imagen, posición del objeto, bordes redondeados y transición para el efecto hover. */
+.card img {
+    width: 100%; /* Ancho del 100% de su contenedor */
+    aspect-ratio: 3/2; /* Relación de aspecto de 3:2 */
+    object-fit: cover; /* La imagen cubre completamente el contenedor, recortándose si es necesario */
+ object-position: center; /* Centra la imagen dentro de su contenedor */
+ border-radius: 15px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Estilo para el hover de las imágenes de la galería */
+/* Agranda ligeramente la imagen cuando el usuario pasa el cursor por encima. */
+.card img:hover {
+    transform: scale(1.05); /* Escala la imagen al 105% */
+}
+
+/* Eventos especiales */
+/* Define el color de fondo, alineación del texto y espaciado interno para la sección de eventos especiales. */
+.eventos {
+    background-color: #FFF6F0; /* Color de fondo beige claro */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 3rem 2rem; /* Espaciado interno */
+}
+
+/* Estilos para el título de la sección de eventos especiales */
+/* Define el tamaño de la fuente, color del texto y margen inferior del título h2. */
+.eventos h2 {
+    font-size: 2rem; /* Tamaño de la fuente */
+    color: #661400; /* Color del texto marrón oscuro */
+    margin-bottom: 2rem; /* Margen inferior */
+}
+
+/* Estilos para cada tarjeta de evento */
+/* Define el color de fondo, margen, espaciado interno, bordes redondeados y sombra para las tarjetas de eventos. */
+.evento-card {
+    background-color: white; /* Color de fondo blanco */
+    margin: 1rem auto; /* Márgenes superior e inferior, centrado horizontalmente */
+    padding: 2rem; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra suave */
+    max-width: 600px; /* Ancho máximo de la tarjeta */
+}
+
+/* Testimonios */
+/* Define el espaciado interno, color de fondo y alineación del texto para la sección de testimonios. */
+.testimonios {
+    padding: 4rem 2rem; /* Espaciado interno */
+    background-color: #fff1e6; /* Color de fondo beige claro */
+    text-align: center; /* Centra el texto horizontalmente */
+
+}
+/* Utiliza Grid Layout para organizar los testimonios de forma flexible. */
+/* 'auto-fit' crea tantas columnas como quepan con un ancho mínimo de 300px (ajustado para evitar filas de un solo elemento demasiado pronto). */
+.testimonis{
+    display: grid; /* Utiliza Grid Layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas que se ajustan, con un ancho mínimo de 250px */
+    gap: 1rem; /* Espacio entre las celdas de la cuadrícula */
+    padding: 2rem; /* Espaciado interno */
+}
+
+
+/* Estilos para el título de la sección de testimonios */
+/* Define el tamaño de la fuente, margen inferior y color del texto del título h2. */
+.testimonios h2 {
+    font-size: 2rem; /* Tamaño de la fuente */
+    margin-bottom: 2rem; /* Margen inferior */
+    color: #791f00; /* Color del texto marrón oscuro */
+}
+
+/* Estilos para cada testimonio individual */
+/* Define el color de fondo, margen, espaciado interno, bordes redondeados y transición para los testimonios. */
+.testimonio {
+ background-color: #ffe5d0; /* Color de fondo beige claro */
+ margin: 1px; /* Margen muy pequeño para separar visualmente */
+ padding: 1rem; /* Espaciado interno */
+ border-radius: 10px; /* Bordes redondeados */
+ transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Estilo para el hover de cada testimonio */
+/* Agranda ligeramente el testimonio cuando el usuario pasa el cursor por encima. */
+.testimonio:hover {
+ transform: scale(1.05); /* Escala el elemento al 105% */
+}
+/* Estilos para el párrafo dentro de cada testimonio */
+/* Define el estilo de fuente itálica y el margen inferior del texto del testimonio. */
+.testimonio p {
+    font-style: italic; /* Texto en cursiva */
+    margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+/* Estilos para el elemento span dentro de cada testimonio (autor) */
+/* Define el peso de la fuente negrita y el color del texto del autor del testimonio. */
+.testimonio span {
+    font-weight: bold; /* Texto en negrita */
+    color: #591600; /* Color del texto marrón oscuro */
+}
+
+/* Estilos para los elementos html y body */
+/* Asegura que no haya desbordamiento horizontal y activa el desplazamiento suave. */
+html, body {
+    overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+}
+html {
+    scroll-behavior: smooth; /* Activa el desplazamiento suave al hacer clic en enlaces ancla */
+}
+
+/* Estilos para un elemento de publicidad (puede estar oculto o tener estilos específicos) */
+.publicidad { display:block; margin:auto
+}
+
+/* Slider */
+/* Define la posición relativa, desbordamiento oculto, ancho, alto, márgenes horizontales, ancho máximo, bordes redondeados y sombra del contenedor del slider. */
+/* Utiliza Flexbox para centrar los elementos dentro del slider. */
+.slider {
+    position:relative; /* Permite posicionar los botones de navegación */
+    overflow: hidden; /* Oculta las diapositivas que no están visibles */
+    width: 100%; /* Ancho del 100% de su contenedor */
+    height: auto; /* Altura automática */
+    margin-left: auto; /* Centra horizontalmente */
+   margin-right: auto; /* Centra horizontalmente */
+    max-width: 850px; /* Ancho máximo del slider */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra suave */
+    display: flex; /* Utiliza Flexbox para la disposición */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    justify-content: center; /* Centra horizontalmente los elementos */
+}
+/* Estilos para el contenedor de las diapositivas */
+/* Utiliza Flexbox para mostrar las diapositivas en una fila horizontal y define la transición para la animación del slider. */
+.slides {
+    display: flex; /* Utiliza Flexbox para la disposición horizontal */
+    transition: transform 0.5s ease-in-out; /* Transición suave para el desplazamiento de las diapositivas */
+}
+
+/* Estilos para cada diapositiva individual */
+/* Define el ancho mínimo y el modelo de caja para cada diapositiva. */
+.slide {
+    min-width: 100%; /* Ancho mínimo del 100% del contenedor del slider */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto */
+    position: relative; /* Permite posicionar elementos hijos de forma absoluta (para la leyenda) */
+}
+
+/* Estilos para las imágenes dentro de cada diapositiva */
+/* Define el ancho, alto, cómo se muestra la imagen y cómo se ajusta al contenedor. */
+.slide img {
+    width: 100%; /* Ancho del 100% de su contenedor */
+    height: 100%; /* Altura automática para mantener la proporción */
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+	object-fit: cover;
+/* La imagen cubre completamente el contenedor, recortándose si es necesario */
+}
+
+/* Estilos para la leyenda de cada diapositiva */
+.caption {
+    position: absolute; /* Posiciona la leyenda relativamente a la diapositiva */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    left: 20px; /* Distancia desde la izquierda */
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para los botones de navegación del slider (anterior y siguiente) */
+button.prev, button.next {
+    position: absolute; /* Posiciona los botones relativamente al contenedor del slider */
+    top: 50%; /* Posiciona el centro del botón en el 50% de la altura */
+    transform: translateY(-50%); /* Ajusta la posición vertical para centrar el botón */
+    background: rgba(255,255,255,0.7); /* Fondo blanco con opacidad */
+    border: none; /* Elimina el borde */
+    border-radius: 50%; /* Forma circular */
+    font-size: 24px; /* Tamaño de la fuente */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; 
+}
+
+/* Estilo para el botón "anterior" */
+/* Define la posición horizontal del botón "anterior". */
+button.prev { left: 10px; }
+/* Estilo para el botón "siguiente" */
+/* Define la posición horizontal del botón "siguiente". */
+button.next { right: 10px; }
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* --- EL IFRAME --- */
+
+.iframe-wrapper {
+    width: 728px; /* Ancho para móvil */
+    height: 90px; /* Altura para móvil */
+    margin: 20px auto; /* Centrar para móvil */
+    margin: 40px auto; /* 40px arriba/abajo, auto para centrar horizontalmente */
+    display: flex; /* Para centrar el iframe dentro del wrapper si fuera más pequeño */
+    justify-content: center; /* Centrar el iframe horizontalmente */
+    align-items: center; /* Centrar el iframe verticalmente */
+    /* Puedes añadir un borde o fondo a este wrapper si quieres un marco alrededor del iframe */
+    background-color: #f0f0f0; /* Fondo del wrapper */
+    border: 1px solid #ccc; /* Borde del wrapper */
+    overflow: hidden; /* Asegura que el iframe no se salga de su wrapper */
+}
+
+#external-page-iframe {
+    width: 728px; /* Ancho por defecto (escritorio) */
+    height: 90px; /* Altura por defecto (escritorio) */
+    border: none; /* Sin borde para el iframe en sí */
+}
+
+/* --- Formulario --- */
+    .form-container {
+    max-width: 500px;
+    margin: 110px auto 150px auto;
+    background: #ffeaea;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      text-align: center;
+      color: #800000;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #b02a2a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+/* --- MEDIA QUERY PARA EL IFRAME EN CELULARES (300px de ancho o menos) --- */
+@media (max-width: 768px) {
+  .iframe-wrapper {
+    width: 300px; /* Ancho para móvil */
+    height: 600px; /* Altura para móvil */
+    margin: 20px auto; /* Centrar para móvil */
+  }
+
+  #external-page-iframe {
+    width: 300px; /* Ancho para móvil */
+    height: 600px; /* Altura para móvil */
+  }
+}
+/*MEDIAQUERIES para responsive*/
+ /* Celulares */
+/* Estilos que se aplicarán en pantallas con un ancho máximo de 768 píxeles. */
+@media(max-width: 768px){
+ .hamburger {
+        display: block;
+     }
+ /* Oculta la lista de enlaces de navegación por defecto y la muestra como una columna desplegable */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #fff; /* Opcional: fondo del menú desplegable */
+  position: absolute;
+  top: 60px; /* Ajustá según el header */
+  right: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+ .nav-links.show {
+    display: flex; /* Muestra la lista como un bloque flex */
+ }
+
+
+ /* Muestra el icono del menú toggle */
+ .menu-toggle {
+    display: block;
+ }
+
+ /* Redefine la lista de enlaces para el estado oculto (redundante, pero asegura el estado inicial) */
+ .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #4b2e2e;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 1rem;
+ }
+
+ /* Muestra la lista de enlaces cuando la clase 'show' está presente */
+ .nav-links.show {
+    display: flex;
+ }
+
+ /* Muestra el icono del menú toggle */
+ .menu-toggle {
+    display: block;
+ }
+ 
+ .nav-links.active {
+    display: flex;
+ }
+
+ /* Añade margen vertical a cada elemento de la lista en dispositivos móviles */
+ .nav-links li {
+    margin: 1rem 0;
+ }
+}
+	    .sucursales-title {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+/* Tablets */
+@media ( min-width : 769px ) and (max-width : 1331px ){
+    /* Cambia el diseño de la galería a dos columnas en tablets */
+    .galeria {
+        grid-template-columns: repeat(2, 1fr); /* Crea dos columnas de igual ancho */
+    }
+}
