@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>	   
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ember & Fork</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<title>menu</title>
+</head>
+<body>
+	
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="imágenes/logo.png" alt="Ember & Fork Logo"></a>
+            </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="sucursales.html">Sucursales</a></li>
+        <li><a href="eventos.html">Eventos</a></li><li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+<section class="menu-section">
+    <h2>Nuestro Menú</h2> <div class="menu-grid">
+        <div class="menu-item">
+            <img src="imágenes/plato1.webp" alt="Hamburguesa Clásica">
+            <div class="overlay">
+                <h3>Hamburguesa Clásica</h3>
+                <p>Carne de res, queso cheddar, lechuga, tomate, cebolla, salsa especial.</p>
+                <button class="comprar-btn" onclick="verImagen('imágenes/plato1-largo.webp')">Ver más</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="imágenes/plato2.webp" alt="Hamburguesa Doble">
+            <div class="overlay">
+                <h3>Hamburguesa Doble</h3>
+                <p>Doble carne de res, doble cheddar, pepinillos, mostaza, ketchup.</p>
+                <button class="comprar-btn" onclick="verImagen('imágenes/plato2-largo.webp')">Ver más</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="imágenes/plato3.webp" alt="Hamburguesa BBQ">
+            <div class="overlay">
+                <h3>Hamburguesa BBQ</h3>
+                <p>Carne de res, queso provolone, cebolla caramelizada, salsa BBQ.</p>
+                <button class="comprar-btn" onclick="verImagen('imágenes/plato3-largo.webp')">Ver más</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="imágenes/Plato 4.webp" alt="Hamburguesa Vegetariana">
+            <div class="overlay">
+                <h3>Hamburguesa Vegetariana</h3>
+                <p>Medallón de lentejas, tomate, lechuga, queso y mayonesa vegana.</p>
+                <button class="comprar-btn" onclick="verImagen('imágenes/Plato4-largo.webp')">Ver más</button>
+            </div>
+		</div>
+	    <div class="menu-item">
+			<img src="imágenes/plato 7.webp" alt="Hamburguesa Neto">
+			<div class ="overlay">	
+			   <h3>Hamburguesa Triple Cheddar</h3>
+			   <p>Medallón de res vacuna, lechuga y mucho, mucho cheddar, che.</p>
+				<button class="comprar-btn" onclick="verImagen('imágenes/plato7-largo.webp')">Ver más</button>
+			</div>
+		</div>
+	    <div class="menu-item">
+			<img src="imágenes/plato6.webp" alt="Hamburguesa Neto">
+			<div class ="overlay">	
+			   <h3>HamburEmber</h3>
+			   <p>3 medallones de res vacuna, cheddar y y panceta con salsa BBQ.</p>
+				<button class="comprar-btn" onclick="verImagen('imágenes/plato6-largo.webp')">Ver más</button>
+			</div>
+		</div>
+        </div>
+</section>
+	<section class="menu-section">
+    <h2>Nuestras Bebidas</h2> <div class="menu-grid">
+        <div class="menu-item">
+            <img src="imágenes/bebida1.webp" alt ="Fernet & Coca" >
+			<div class ="overlay">
+            <h3>Fernet & Coca</h3>
+            <p>Combina el licor amargo Fernet Branca con Coca-Cola, servida con hielo.</p>
+		    <button class="comprar-btn" onclick="verImagen('imágenes/bebida1-largo.webp')">Ver más</button>
+            </div>
+		</div>	
+        <div class="menu-item">
+            <img src="imágenes/mojito.webp" alt="Mojito Clásico">
+			<div class ="overlay">
+            <h3>Mojito Clásico</h3>
+                <p>El cóctel cubano por excelencia. Ron, hierbabuena fresca, azúcar, lima y soda. Refrescante y aromático.</p>
+				<button class="comprar-btn" onclick="verImagen('imágenes/mojito-largo.webp')">Ver más</button>
+			</div>	
+        </div>
+
+        <div class="menu-item">
+            <img src="imágenes/limonada.jpg" alt="Limonada Natural">
+			<div class ="overlay">
+            <h3>Limonada Natural</h3>
+                <p>Nuestra limonada casera, preparada con limones frescos y un toque de endulzante natural. ¡Ideal para refrescarte!</p>
+				<button class="comprar-btn" onclick="verImagen('imágenes/limonada-largo.webp')">Ver más</button>
+			</div>	
+        </div>
+
+        <div class="menu-item">
+            <img src="imágenes/vino.jpg" alt="Vino Tinto de la Casa">
+			<div class ="overlay">
+            <h3>Vino Tinto Cabernet</h3>
+                <p>Un vino tinto joven y afrutado, perfecto para maridar con nuestras carnes y hamburguesas.</p>
+				<button class="comprar-btn" onclick="verImagen('imágenes/vino-largo.webp')">Ver más</button>
+			</div>	
+        </div>
+		
+        <div class="menu-item">
+            <img src="imágenes/piña.webp" alt="Piña Colada">
+			<div class ="overlay">
+            <h3>Piña Colada</h3>
+                <p>Un vino tinto joven y afrutado, perfecto para maridar con nuestras carnes y hamburguesas.</p>
+				<button class="comprar-btn" onclick="verImagen('imágenes/piña-largo.webp')">Ver más</button>
+			</div>	
+        </div>		
+
+        <div class="menu-item">
+            <img src="imágenes/jugo.jpg" alt="Batido de Frutas Tropicales">
+			<div class ="overlay">
+            <h3>Batido de Frutas</h3>
+                <p>Una explosión de sabor con mango, ananá y maracuyá, mezclados con un toque de yogurht.</p>
+				<button class="comprar-btn" onclick="verImagen('imágenes/jugo-largo.webp')">Ver más</button>
+			</div>	
+        </div>
+     </div>		
+</section>
+	
+  <footer>
+         <section id="contacto" class="seccion">
+         <h1>📞 Contactanos</h1>
+         <p>¿Tenés dudas o sugerencias? Escribinos a contacto@emberfork.com o llamanos al 9 11 3617-8459 </p>
+         </section>
+    <div class="footer-content">
+      <div class="logo-social">
+       <a href="index.html"><img src="imágenes/logo.png" alt="Ember & Fork Logo" class="footer-logo"></a>
+        <div class="footer-redes">
+          <img src="imágenes/facebook.png" alt="Facebook">
+            <img src="imágenes/ig.png" alt="Instagram">
+            <img src="imágenes/tiktok logo.png" alt="TikTok">
+        </div>
+      </div>
+      <p class="rights">&copy; 2025 Ember & Fork. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+   <script src="script.js" defer></script>
+  <div id="modal" class="modal">
+  <span class="cerrar" onclick="cerrarModal()">&times;</span>
+  <img id="imagen-ampliada" alt="Imagen ampliada">
+  </div>
+</body>
+</html>
