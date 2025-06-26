@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ember & Fork</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<title>sucursales</title>
+</head>	
+<body>
+	
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="imágenes/logo.png" alt="Ember & Fork Logo"></a>
+            </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="sucursales.html">Sucursales</a></li>
+        <li><a href="eventos.html">Eventos</a></li><li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+<section id="sucursales" class="seccion sucursales-visual">
+    <h2 class="sucursales-title">ESTÁS MUY CERCA DE LA DIVERSIÓN</h2>
+	<p class="sucursales-subtitle">📍 Nuestras Sucursales:</p>
+    <div class="sucursales-grid">
+        <div class="sucursal-item">
+            <img src="imágenes/puerto madero.jpg" alt="Sucursal CABA">
+            <div class="sucursal-info">
+                <h3>PUERTO MADERO</h3>
+                <p class="direccion">📍 Av. Alicia Moreau de Justo 580</p>
+                <p class="descripcion">Ubicado en el moderno barrio de Puerto Madero, cerca de importantes puntos de interés.</p>
+                <a href="https://www.google.com/maps/place/Av.+Alicia+Moreau+de+Justo+580,+C1107CDA+CABA/@-34.6036975,-58.3668819,17z" target="_blank">Ver en el mapa</a>
+            </div>
+        </div>
+        <div class="sucursal-item">
+            <img src="imágenes/san isidro.jpg" alt="Sucursal San Isidro">
+            <div class="sucursal-info">
+                <h3>SAN ISIDRO</h3>
+                <p class="direccion">📍 José Ingenieros 801</p>
+                <p class="descripcion">En el corazón de San Isidro, un lugar ideal para disfrutar de nuestras hamburguesas.</p>
+                <a href="https://www.google.com/maps/place/Jos%C3%A9+Ingenieros+801,+B1642CUH+San+Isidro,+Provincia+de+Buenos+Aires/@-34.492888,-58.514039,17z" target="_blank">Ver en el mapa</a>
+            </div>
+        </div>
+        <div class="sucursal-item">
+            <img src="imágenes/cordoba.jpg" alt="Sucursal Córdoba">
+            <div class="sucursal-info">
+                <h3>CÓRDOBA</h3>
+                <p class="direccion">📍 12 de octubre 2899</p>
+                <p class="descripcion">Nuestra deliciosa propuesta llega a la vibrante ciudad de Córdoba.</p>
+                <a href="https://www.google.com/maps/place/12+de+Octubre+2899,+X5004FKE+C%C3%B3rdoba/@-31.4338597,-64.194232,17z" target="_blank">Ver en el mapa</a>
+            </div>
+        </div>
+    </div>
+    <p class="proximamente">¡Muy pronto abriremos nuevas sucursales en Mendoza y La Plata!</p>
+</section>
+  <footer>
+         <section id="contacto" class="seccion">
+         <h1>📞 Contactanos</h1>
+         <p>¿Tenés dudas o sugerencias? Escribinos a contacto@emberfork.com o llamanos al 9 11 3617-8459 </p>
+         </section>
+    <div class="footer-content">
+      <div class="logo-social">
+       <a href="index.html"><img src="imágenes/logo.png" alt="Ember & Fork Logo" class="footer-logo"></a>
+        <div class="footer-redes">
+          <img src="imágenes/facebook.png" alt="Facebook">
+            <img src="imágenes/ig.png" alt="Instagram">
+            <img src="imágenes/tiktok logo.png" alt="TikTok">
+        </div>
+      </div>
+      <p class="rights">&copy; 2025 Ember & Fork. Todos los derechos reservados.</p>
+	  <a href="https://sebaspr19.github.io/ember-presentacion/"><p class="presentacion" >Sebastián Pinto - Presentación</p></a>	
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
